@@ -13,6 +13,14 @@ To wrap up and cover unsecure rdp session using ssh tunneling.
 * When ssh server is in the same network as RDS server;
 * When you need to access PC in the same network as the SSH server (RDP access should enabled on remote PC).
 
+#### What this script is doing
+1. Script will check if `plink.exe` already exist in `C:\Users\%username%\` folder;
+2. If it is not exist it will automatically attempt to download it from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html using `bitsadmin` utility, and it won't download it if `plink.exe` exist in user's home directory;
+3. Then it will initiate an SSH connection to remote SSH server in another CMD window to bring up the SSH tunnel and forward port from local user's PC to remote RDP server port (by default 3389);
+4. Then it will start standard windows RDP utility `mstsc.exe` over localhost IP address and local port used in previous step;
+5. When work is over and user logged out from RDP server, `mstsc.exe` utility exits, script then will attempt to kill `plink.exe` process opened in second shell to clear the processes;
+6. And finally script will exit.
+
 #### Author
 Ilya Moiseev <ilya@moiseev.su>
 

@@ -14,7 +14,7 @@ rem Author: Ilya Moiseev <ilya@moiseev.su>
 rem
 rem Version: 1.1 (April 02, 2020)
 rem
-rem Purpose: to wrap up and cover unsecure rdp session using ssh tunneling
+rem Purpose: to wrap up and cover insecure rdp session using SSH tunneling
 rem
 rem License: "THE BEER-WARE LICENSE" (Revision 42):
 rem <ilya@moiseev.su> wrote this file.  As long as you retain this notice you
@@ -69,7 +69,7 @@ rem Starting tunnel to SSH server with port forwarding in the second shell
 :STARTTUNNEL
 echo Starting tunnel from your PC, using our ssh server, to remote desktop
 start /MIN "TUNNEL" cmd /C C:\Users\%username%\plink.exe -batch -N -L %localtunport%:%dstrdpip%:%dstrdpport% %tunsshuser%@%tunip% -P %tunport% -pw %tunsshuserpwd% -hostkey %sshtunhostkey%
-echo Preapearing to start and RDP session
+echo Preapearing to start an RDP session
 goto STARTRDPSESSION 
 
 rem When tunnel is up -- start RDP session utulity, when work is done, close the session by calling script section to close plink.exe
