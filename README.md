@@ -1,8 +1,8 @@
 ## myrdp.bat: SSH wrapper over old insecure RDP
 
 #### Usage
-Simply run this bat file from cmd or just by clicking on it.
-No administrative privelleges required.
+Simply run this bat file from cmd or just by clicking on it, no administrative privelleges required.
+Tested on Windows 10 and Windows 7.
 
 #### Purpose
 To wrap up and cover unsecure rdp session using ssh tunneling.
@@ -48,6 +48,6 @@ For example:
 
 `set tunsshuserpwd=M3GaSEcR3tPAsSwOrD`
 
-**SSH server fingerprint**, with this setting, plink.exe won't ask you to confirm and won't put this fingerprint into the registry. You can find it by issuing: plink.exe -v -batch $HOSTNAME -P $PORT_NUMBER The string after "Host key finger print is:" is our fingerprint to put here:
+**SSH server fingerprint**, with this setting, plink.exe won't ask you to confirm and won't put this fingerprint into the registry. You can find it by issuing: `plink.exe -v -batch $HOSTNAME -P $PORT_NUMBER` The string after *"Host key finger print is:"* is our fingerprint to put here:
 
 `set sshtunhostkey=18:c2:4d:3f:79:c2:c3:4a:76:14:44:83:8f:47:ae:ad`
