@@ -1,8 +1,9 @@
-## myrdp.bat: SSH wrapper over old insecure RDP
+## tunrdp.bat: SSH wrapper over old insecure RDP
 
 #### Usage
 Simply run this bat file from cmd or just by clicking on it, no administrative privelleges required.
-Tested on Windows 10 and Windows 7.
+
+It should work on Windows 10 and Windows 7.
 
 #### Purpose
 To wrap up and cover unsecure rdp session using ssh tunneling.
@@ -16,12 +17,11 @@ To wrap up and cover unsecure rdp session using ssh tunneling.
 Ilya Moiseev <ilya@moiseev.su>
 
 #### Credits
-This piece of code uses third-party tool: plink.exe
+This piece of code uses third-party tool: `plink.exe`
 
 It can be found here: [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 License: [https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html)
-
 
 #### Settings
 Make sure to set all the values in correct manner in the script body, because **I didn't implement any setting values checks** :-)
@@ -52,7 +52,7 @@ For example:
 
 `set tunsshuser=tunnelrdpuser`
 
-**PASSWORD for the SSH server user**, yes, in insecure manner. do not generate password with special symbols, there will be an issue with batch handling it:
+**PASSWORD for the SSH server user**, yes, in insecure manner. Do not generate password with special symbols, there will be an issue with batch handling it:
 
 `set tunsshuserpwd=M3GaSEcR3tPAsSwOrD`
 
