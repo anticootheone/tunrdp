@@ -15,8 +15,16 @@ To wrap up and cover unsecure rdp session using ssh tunneling.
 #### Author
 Ilya Moiseev <ilya@moiseev.su>
 
+#### Credits
+This piece of code uses third-party tool: plink.exe
+
+It can be found here: [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+License: [https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html)
+
+
 #### Settings
-Make sure to set all values in correct manner, because **I didn't implement any settings value checks** :-)
+Make sure to set all the values in correct manner in the script body, because **I didn't implement any setting values checks** :-)
 
 For example:
 
