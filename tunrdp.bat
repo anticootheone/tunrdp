@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-rem myrdp.bat: SSH wrapper over old insecure RDP
+rem tunrdp.bat: SSH wrapper over old insecure RDP
 rem
 rem Usage: Simply run this bat file from cmd or just by clicking on it.
 rem        No administrative privelleges required.
@@ -12,11 +12,11 @@ rem            3) When you need to access PC in the same network as the SSH serv
 rem
 rem Author: Ilya Moiseev <ilya@moiseev.su>
 rem
-rem Version: 1.0 (April 01, 2020)
+rem Version: 1.1 (April 02, 2020)
 rem
 rem Purpose: to wrap up and cover unsecure rdp session using ssh tunneling
 rem
-rem License: THE BEER-WARE LICENSE" (Revision 42):
+rem License: "THE BEER-WARE LICENSE" (Revision 42):
 rem <ilya@moiseev.su> wrote this file.  As long as you retain this notice you
 rem can do whatever you want with this stuff. If we meet some day, and you think
 rem this stuff is worth it, you can buy me a non-alcoholic beer in return. Ilya Moiseev
@@ -50,7 +50,8 @@ set tunsshuserpwd=
 rem SSH server fingerprint
 rem with this setting, plink.exe won't ask you to confirm and won't put this fingerprint into the registry.
 rem You can find it by issuing: plink.exe -v -batch $HOSTNAME -P $PORT_NUMBER
-rem The string after "Host key finger print is:" is our fingerprint to put here. For example: 18:c2:4d:3f:79:c2:c3:4a:76:14:44:83:8f:47:ae:ad
+rem The string after "Host key finger print is:" is our fingerprint to put here.
+rem For example: 18:c2:4d:3f:79:c2:c3:4a:76:14:44:83:8f:47:ae:ad
 set sshtunhostkey=
 
 rem Starting with check if plink.exe already exis, if not -- download it into the home user's directory and call start tunneling script section
